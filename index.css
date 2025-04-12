@@ -1,0 +1,81 @@
+body{
+   background:linear-gradient(rgb(47, 123, 134),rgb(190, 166, 119));
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+header {
+    display: block;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+#introduction{
+    display:inline-block;
+    align-items:center;
+    justify-content: space-between;
+
+    
+}
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    
+}
+.gallery{
+    Height:400px;
+    width:400px;
+    display:grid; gap:80px;;
+   
+    border-width:5px;
+    border-radius:50px;
+    animation-name:slideleft;
+    animation-iteration-count: 30s;
+    animation-direction: normal;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+
+}
+@keyframes slideleft{
+    from{
+        transform:translateX(0);
+
+    }
+    to{
+        transform:translateX(200px);
+    }
+
+}
+.form{
+    background-color:rgb(47, 123, 134);
+    align-items:center;
+    display: flex;
+    justify-content: center;
+    
+}
+#input{
+    background-color: rgb(190, 166, 119);
+    color:black;
+}
+input:hover{
+    background-color: white;
+    cursor:pointer;
+}
+#btn{
+    align-items:center;
+    justify-content:center;
+    display:flex;
+    border-width:3px;
+    border-color:orange;
+    cursor:pointer;
+    color:black;
+}
+#btn :hover{
+    background-color:Aqua;
+    
+}
+
+
