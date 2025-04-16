@@ -10,6 +10,8 @@ header {
     padding: 20px;
     background-color: #333;
     color: white;
+    width:100%;
+    height:50vh;
 }
 #introduction{
     display:inline-block;
@@ -27,16 +29,16 @@ header {
 .gallery{
     Height:400px;
     width:400px;
-    display:grid; gap:80px;;
+    display:flex; gap:80px;;
    
     border-width:5px;
-    border-radius:50px;
+    border-radius:20px;
     animation-name:slideleft;
-    animation-iteration-count: 30s;
-    animation-direction: normal;
+    animation-iteration-count: 10s;
+    animation-direction: alternate-reverse;
     animation-duration: 5s;
     animation-delay: 1s;
-    animation-timing-function: linear;
+    animation-timing-function: inherit;
 
 }
 @keyframes slideleft{
