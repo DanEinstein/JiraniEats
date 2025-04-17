@@ -1,101 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-   background:linear-gradient(rgb(47, 123, 134),rgb(190, 166, 119));
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
+    background: linear-gradient(rgb(47, 123, 134),rgb(190, 166, 119));
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
 }
-header {
-    display: block;
-    justify-content: space-between;
-    padding: 20px;
+header{
     background-color: #333;
-    color: white;
-    width:100%;
-    height:70vh;
+    color:white;
+    height:60vh;
 }
-#introduction{
-    display:inline-block;
-    align-items:center;
-    justify-content: space-between;
-
+#searchbar{
+    display:flex;
+    position:relative;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    animation-iteration-count: infinite;
     
 }
 .navbar{
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    
-}
-.gallery{
-    Height:400px;
-    width:400px;
-    display:flex; gap:80px;;
-   
-    border-width:5px;
-    border-radius:20px;
-    animation-name:slideleft;
-    animation-iteration-count: 10s;
-    animation-direction: alternate-reverse;
-    animation-duration: 5s;
-    animation-delay: 1s;
-    animation-timing-function: inherit;
-
-}
-@keyframes slideleft{
-    from{
-        transform:translateX(0);
-
-    }
-    to{
-        transform:translateX(200px);
-    }
-
-}
-.form{
-    background-color:rgb(47, 123, 134);
-    align-items:center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+    flex-wrap: wrap;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    animation-iteration-count: infinite;
+    
+    
+    background-color: #333;
+    color:white;
     
 }
-#input{
-    background-color: rgb(190, 166, 119);
-    color:black;
+span{
+    color:Red;
 }
-input:hover{
-    background-color: white;
+a{
+    color:white;
     cursor:pointer;
+   
+}
+a:hover{
+    background-color: rgb(154, 70, 233);
 }
 #btn{
-    align-items:center;
-    justify-content:center;
-    display:flex;
-    border-width:3px;
-    border-color:orange;
-    cursor:pointer;
-    color:black;
+    background-color: red;
+    font-size:1rem;
 }
-#btn :hover{
-    background-color:Aqua;
+input placeholder{
+    background-color: gray;
+    color:blue;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    animation-iteration-count: infinite;
     
 }
-@media screen and (max-width: 768px) {
-   
-    .gallery{
-        flex-direction: column;
-        gap: 20px;
+
+#box{
+    display: inline-block;
+    width: 100%;
+    height:100%;
+    max-width:780px;
+    max-height:780px;
+      
+    
+    
+}
+.product {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+    border: 1px solid rgb(47, 123, 134) ;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .product-price{
+    color:greenyellow;
+    font-weight:bold;
+  }
+.product-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    max-width:400px;
+    max-height:400px;
+    margin: 0 auto;
+    display:flex;
+    justify-content:space-between;
+}
+
+@media screen and (max-width:768px){
+    header{
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+      flex-wrap: wrap;
+      
+
     }
     .navbar{
         flex-direction: column;
-        gap: 10px;
+      justify-content: center;
+      align-items:center;
+      flex-wrap: wrap;
+
     }
-    #introduction{
-        text-align:center;
+    .product-image{
+        flex-direction: column;
     }
-    .form{
-        flex-direction:column;
+    #gallery{
+        flex-direction: column;
+    }
+    .table{
+        max-width:710px;
+        width:100%;
+        
+        
+        
+        
     }
     
 }
+table tr th{
+    background-color:rgb(190, 166, 119);
+}
+table td{
+    background-color:rgb(47, 123, 134);
+    width:200px;
+    height:50px;
+}
+#box{
+    justify-content: center;
+    align-items: center;
+    display:block;
+}
+#form{
+    justify-content: center;
+    align-items: center;
+    display:block;
+    background-color:#333;
+    color:white;
+    height:50vh;
+}
+footer{
+    align-items:center;
+    justify-content: center;
+    display:flex;
+    background-color: #333;
+    color:white;
+}
+@keyframes slideleft{
+    from{
+        transform:translateX(200px);
+
+    }
+    to{
+        transform:translateX(0);
+    }
+
+}
+.gallery{
+    max-width:300px;
+    width:100%;
+    height: Auto;
+    animation-name:slideleft;
+    animation-iteration-count: 20s;
+    animation-duration: 3s;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20ch; /* Adjust 'ch' based on your text length */
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
 
 
